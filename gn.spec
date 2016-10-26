@@ -22,6 +22,7 @@ Source100:	%{name}.rpmlintrc
 Patch0:		gn-20161011-buildfix.patch
 BuildRequires:	python
 BuildRequires:	ninja
+BuildRequires:	devel(libatomic)
 
 %description
 The gn build tool, needed to build Chromium
