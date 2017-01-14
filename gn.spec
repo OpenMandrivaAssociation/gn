@@ -1,4 +1,4 @@
-%define date 20161011
+%define date 20170114
 
 Summary:	The GN build tool
 Name:		gn
@@ -19,7 +19,6 @@ Source3:	config-%{date}.tar.xz
 # https://chromium.googlesource.com/chromium/testing/gtest
 Source4:	gtest-%{date}.tar.xz
 Source100:	%{name}.rpmlintrc
-Patch0:		gn-20161011-buildfix.patch
 BuildRequires:	python
 BuildRequires:	ninja
 BuildRequires:	devel(libatomic)
