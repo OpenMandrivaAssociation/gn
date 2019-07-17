@@ -3,7 +3,7 @@
 Summary:	The GN build tool
 Name:		gn
 Version:	0.%{date}
-Release:	2
+Release:	1
 License:	GPLv3+
 Group:		Development/Other
 Url:		http://chromium.googlesource.com/
