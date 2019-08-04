@@ -2,7 +2,7 @@
 
 Summary:	The GN build tool
 Name:		gn
-Version:	20181031
+Version:	20190403
 Release:	1
 License:	GPLv3+
 Group:		Development/Other
