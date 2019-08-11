@@ -21,7 +21,7 @@ Source4:	gtest-%{date}.tar.xz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	python
 BuildRequires:	ninja
-BuildRequires:	devel(libatomic)
+BuildRequires:	atomic-devel
 
 %description
 The gn build tool, needed to build Chromium
