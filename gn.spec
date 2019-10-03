@@ -14,6 +14,7 @@ Source100:	%{name}.rpmlintrc
 BuildRequires:	python
 BuildRequires:	ninja
 BuildRequires:	atomic-devel
+BuildRequires:	git-core
 
 %description
 The gn build tool, needed to build Chromium
