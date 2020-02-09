@@ -1,15 +1,16 @@
-%define date 20191003
-
 Summary:	The GN build tool
 Name:		gn
-Version:	20191003
+Version:	20200209
 Release:	1
 License:	GPLv3+
 Group:		Development/Other
 Url:		http://chromium.googlesource.com/
 # git clone https://gn.googlesource.com/gn
+# tar cf gn-%{version}.tar gn
+# zstd -19 --rm *.tar
 # gn can't be built from a "git archive"-d tarball, must package .git
-Source0:	gn-%{date}.tar.xz
+# (and even --depth 1 won't work)
+Source0:	gn-%{version}.tar.zst
 Source100:	%{name}.rpmlintrc
 BuildRequires:	python
 BuildRequires:	ninja
