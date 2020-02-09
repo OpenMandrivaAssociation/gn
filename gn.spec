@@ -16,13 +16,24 @@ BuildRequires:	python
 BuildRequires:	ninja
 BuildRequires:	atomic-devel
 BuildRequires:	git-core
+# FIXME as of clang 10.0.0-20200207 crashes on startup if
+# built with clang on armv7hnl. It works perfectly on the
+# other arches and on armv7hnl built with gcc...
+%ifarch %{arm}
+BuildRequires:	gcc gcc-c++
+%endif
 
 %description
 The gn build tool, needed to build Chromium
 
 %prep
 %autosetup -p1 -n %{name}
-python build/gen.py --no-static-libstdc++
+%ifarch %{arm}
+export CC=gcc
+export CXX=g++
+%endif
+python build/gen.py \
+	--no-static-libstdc++
 
 %build
 %ninja_build -C out
