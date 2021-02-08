@@ -1,6 +1,8 @@
+%define debug_package %{nil}
+
 Summary:	The GN build tool
 Name:		gn
-Version:	20200209
+Version:	20210208
 Release:	1
 License:	GPLv3+
 Group:		Development/Other
@@ -24,18 +26,21 @@ BuildRequires:	gcc gcc-c++
 %endif
 
 %description
-The gn build tool, needed to build Chromium
+The gn build tool, needed to build Chromium.
 
 %prep
 %autosetup -p1 -n %{name}
+
+%build
+%set_build_flags
 %ifarch %{arm}
 export CC=gcc
 export CXX=g++
 %endif
 python build/gen.py \
+	--use-lto \
 	--no-static-libstdc++
 
-%build
 %ninja_build -C out
 
 %install
