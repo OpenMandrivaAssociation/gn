@@ -6,7 +6,7 @@ Version:	20240711
 Release:	1
 License:	GPLv3+
 Group:		Development/Other
-Url:		http://chromium.googlesource.com/
+Url:		https://chromium.googlesource.com/
 # git clone https://gn.googlesource.com/gn
 # tar cf gn-%{version}.tar gn
 # zstd --ultra -22 --rm *.tar
